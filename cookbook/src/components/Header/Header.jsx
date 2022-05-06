@@ -1,12 +1,36 @@
 import React from 'react';
+import logo from '../../images/logo.png';
 import "./header.scss";
 
 const Header = () => {
 
     return (
         <div className='headerwrap'>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Leaf_icon_15.svg/1003px-Leaf_icon_15.svg.png" alt="logo" className='headerimg' />
-            <p>Biti Zdrava</p>
+            <div className='hw1'>
+                <img src={logo} alt="logo" className='headerimg' />
+                <p>Healthy <span>Artist</span></p>
+            </div>
+
+            <div className='hw2'>
+
+                <div className='search-box'>
+                    <button className="btn-search"><i className="fas fa-search"></i></button>
+                    <input type="text" className="input-search" placeholder="Type to Search..." />
+
+                </div>
+
+
+                <label className='switch'>
+                    <input className="switch-input" type="checkbox" />
+                    <span className="switch-label" data-on='on' data-off="Off"></span>
+                    <span className="switch-handle"></span>
+                </label>
+
+
+
+
+            </div>
+
         </div>
     );
 };

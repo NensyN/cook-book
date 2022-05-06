@@ -10,6 +10,9 @@ const HomePage = () => {
     return (
         <div className='homewrap'>
             <Header />
+            <div className='main'>
+            <p className='maintext'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, cum?</p>
+            </div>
             <Card />
             <Footer />
         </div>

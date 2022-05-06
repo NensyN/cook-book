@@ -1,15 +1,192 @@
 @import '../../variables';
-.headerwrapp {
-    padding: 20px 50px;
-    background-color: cadetblue;
-    color: white;
-    font-size: 26px;
+.headerwrap {
+    padding: 2vh 3vw;
+    background-color: #25262a;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.headerimg {
-    height: 30px;
-    margin-right: 15px;
+    justify-content: space-between;
+    .hw1 {
+        color: white;
+        font-size: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-family: 'Water Brush', cursive;
+    }
+    .headerimg {
+        height: 4.5vh;
+        margin-right: 1vw;
+        border: 1px solid white;
+        border-radius: 50%;
+        background-color: white;
+    }
+    span {
+        color: $color1;
+    }
+    .hw2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        ////SEARCH///////
+        .search-box {
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+        }
+        .input-search {
+            height: 2.5vh;
+            width: 2vw;
+            border-style: none;
+            padding: 10px;
+            font-size: 15px;
+            letter-spacing: 2px;
+            outline: none;
+            border-radius: 25px;
+            transition: all .5s ease-in-out;
+            background-color: $color2;
+            padding-right: 40px;
+            color: #fff;
+            border: 3px solid white;
+        }
+        .input-search::placeholder {
+            color: rgba(255, 255, 255, .5);
+            font-size: 15px;
+            letter-spacing: 1px;
+            font-weight: 100;
+        }
+        .btn-search {
+            width: 2vw;
+            height: 1.8vh;
+            border-style: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 20%;
+            position: absolute;
+            background-color: transparent;
+            pointer-events: painted;
+            background-image: url('../../images/newsearch.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            right: 9px;
+            bottom: 5px;
+        }
+        .btn-search:focus~.input-search {
+            width: 15vw;
+            border-radius: 0px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, .5);
+            transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+            font-family: 'Poppins', sans-serif;
+        }
+        .input-search:focus {
+            width: 15vw;
+            border-radius: 0px;
+            background-color: transparent;
+            border-bottom: 1px solid rgba(255, 255, 255, .5);
+            transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+            border: none;
+        }
+        ////////ON/OFF BUTTON///////
+        .switch {
+            position: relative;
+            display: block;
+            vertical-align: top;
+            width: 2.5vw;
+            height: 2vh;
+            padding: 3px;
+            background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
+            background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+            border-radius: 18px;
+            box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            box-sizing: content-box;
+            margin-left: 0.5vw;
+        }
+        .switch-input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            box-sizing: content-box;
+        }
+        .switch-label {
+            position: relative;
+            display: block;
+            height: inherit;
+            text-transform: uppercase;
+            background: $color2;
+            border-radius: inherit;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+            box-sizing: content-box;
+            background-image: url('../../images/moon.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right;
+        }
+        .switch-label:before,
+        .switch-label:after {
+            position: absolute;
+            top: 50%;
+            margin-top: -.5em;
+            line-height: 1;
+            -webkit-transition: inherit;
+            -moz-transition: inherit;
+            -o-transition: inherit;
+            transition: inherit;
+            box-sizing: content-box;
+        }
+        .switch-input:checked~.switch-label {
+            background-color: $color1;
+            background-image: url('../../images/sun.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: left;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+        }
+        .switch-input:checked~.switch-label:before {
+            opacity: 0;
+        }
+        .switch-input:checked~.switch-label:after {
+            opacity: 1;
+        }
+        .switch-handle {
+            position: absolute;
+            top: 3px;
+            left: 3.5px;
+            width: 1.2vw;
+            height: 2.1vh;
+            background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+            background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+            border-radius: 100%;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+        }
+        .switch-handle:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -6px 0 0 -6px;
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(to bottom, #eeeeee, #FFFFFF);
+            background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);
+            border-radius: 6px;
+            box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+        }
+        .switch-input:checked~.switch-handle {
+            left: 33px;
+            box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+        }
+        /* Transition
+    ========================== */
+        .switch-label,
+        .switch-handle {
+            transition: All 0.3s ease;
+            -webkit-transition: All 0.3s ease;
+            -moz-transition: All 0.3s ease;
+            -o-transition: All 0.3s ease;
+        }
+    }
 }

@@ -1,7 +1,7 @@
 @import '../../variables';
 .headerwrap {
     padding: 2vh 3vw;
-    background-color: #25262a;
+    background-color: $color3;
     display: flex;
     justify-content: space-between;
     .hw1 {
@@ -92,7 +92,7 @@
         .switch {
             position: relative;
             display: block;
-            vertical-align: top;
+            // vertical-align: top;
             width: 2.5vw;
             height: 2vh;
             padding: 3px;

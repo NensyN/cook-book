@@ -47,7 +47,7 @@ const App = () => {
             </Route>
             {/* {selectedRecipeId ? <SinglePage recipe={data.find(e=>e.id===selectedRecipeId)}/> : <HomePage recipes={data} setSelectedRecipe={setSelectedRecipe}/>} */}
             <Route path={"/"}>
-              <HomePage recipes={data} setModal={setModal} setSelectedRecipe={setSelectedRecipe} />
+              <HomePage recipes={data} setShouldUpdate={setShouldUpdate} setModal={setModal} setSelectedRecipe={setSelectedRecipe} />
             </Route>
           </Switch>
           <Footer />

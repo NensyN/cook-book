@@ -7,6 +7,8 @@ import Card from "../../components/Card/Card.jsx";
 import pies from '../../images/pies.PNG'
 import soup from '../../images/soup.jpg'
 import oatmeal from '../../images/oatmeal.jpg'
+import artist from '../../images/artist.jpg'
+import artist2 from '../../images/artist2.jpg'
 // import bigfork from '../../images/bigfork.png'
 // import bigfork2 from '../../images/bigfork2.png'
 
@@ -21,9 +23,33 @@ const HomePage = (props) => {
                 <p className='maintext'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, cum?</p>
             </div>
 
+
+
+
+
+            <div className='secmain01'>
+                <div className='secmain001'>
+                    <img src={artist} alt="artist" className='artistimg' />
+                    <img src={artist2} alt="artist2" className='artistimg' />
+                    <div className='secmain0001'>
+                        <p className='t11'>WHO IS THE ASTIST?</p>
+                        <p className='t12'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid assumenda consectetur beatae asperiores, recusandae rem aspernatur dolore tempore repudiandae nostrum dolores itaque nam! Tenetur delectus autem eius sunt dolores? Molestias!</p>
+                        <p className='t12'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est eius assumenda at quos facilis sit sequi ipsam cumque neque quidem iusto non, vitae quod necessitatibus, dolore deserunt voluptas iste perferendis, distinctio qui repellendus vel doloribus dicta. Officia, expedita dignissimos?</p>
+                        <p className='t12'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid assumenda consectetur beatae asperiores, recusandae rem aspernatur dolore tempore repudiandae nostrum dolores itaque nam! Tenetur delectus autem eius sunt dolores? Molestias!</p>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+            {/* valjda je ovde kraj */}
             <div className='secmain'>
                 <div className='secmain1'>
-                    <p className='t1'>WHO IS THE ASTIST?</p>
+                    <p className='t1'>HISTORY OF THE PERFORMER</p>
                     <p className='t2'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, ipsa fugit? Dicta labore cupiditate dolore nesciunt excepturi. Ipsam, voluptates voluptatibus.</p>
                     {/* <img src={fork} alt="fork" className='img1' /> */}
                 </div>
@@ -52,18 +78,49 @@ const HomePage = (props) => {
 
                 </div>
             </div>
+
+
+
+
             {/* SKILLS PART */}
             <div className='skilldiv'>
                 <div className='pictureskill'></div>
                 <div className='skillnote'>
                     <p className='title'>SKILLS</p>
+                    <p className='comment'>~Everything You Want To Know~</p>
                     <p className='text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo animi repellendus provident perspiciatis magnam eos obcaecati sunt fugit, unde veritatis error numquam et, nisi aspernatur aut. Consectetur deserunt exercitationem suscipit.</p>
+                    <div className='skillwrap'>
+
+                        <div className='skill'>
+                            <p>Creativity</p>
+                            <p>96%</p>
+                        </div>
+                        <div className='skill'>
+                            <p>Respectability</p>
+                            <p>100%</p>
+                        </div>
+                        <div className='skill'>
+                            <p>Adaptability</p>
+                            <p>98%</p>
+                        </div>
+                        <div className='skill'>
+                            <p>Decision making</p>
+                            <p>95%</p>
+                        </div>
+                        <div className='skill'>
+                            <p>Artistic aptitude</p>
+                            <p>88%</p>
+                        </div>
+                        <div className='skill'>
+                            <p>Project management</p>
+                            <p>90%</p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
-            {/* <div className='divfork'>
-<img src={fork} alt="fork" className='fork' />
-</div> */}
+
             {/* DEO ZA SEARCH I CREATE BTN */}
 
             <div className='secheader'>

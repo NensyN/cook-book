@@ -1,14 +1,14 @@
 import React from 'react';
 import "./home.scss";
 import Card from "../../components/Card/Card.jsx";
-import Header from "../../components/Header/Header.jsx";
-import Footer from "../../components/Footer/Footer.jsx";
+// import Header from "../../components/Header/Header.jsx";
+// import Footer from "../../components/Footer/Footer.jsx";
 // import fork from '../../images/fork.png'
 import pies from '../../images/pies.PNG'
 import soup from '../../images/soup.jpg'
 import oatmeal from '../../images/oatmeal.jpg'
-import bigfork from '../../images/bigfork.png'
-import bigfork2 from '../../images/bigfork2.png'
+// import bigfork from '../../images/bigfork.png'
+// import bigfork2 from '../../images/bigfork2.png'
 
 
 const HomePage = (props) => {
@@ -67,13 +67,26 @@ const HomePage = (props) => {
             {/* DEO ZA SEARCH I CREATE BTN */}
 
             <div className='secheader'>
-                <div className='search-box'>
-                    <button className="btn-search"><i className="fas fa-search"></i></button>
-                    <input type="text" className="input-search" placeholder="Type to Search..." />
+
+                <div className='secwrap'>
+
+                    <div className='macaroondiv'>
+                        <div className='macpicdiv'></div>
+                    </div>
+
+                    <div className='search-box'>
+                        <button className="btn-search"><i className="fas fa-search"></i></button>
+                        <input type="text" className="input-search" placeholder="Type to Search..." />
+                    </div>
+                    <div className='lastwrap'>
+                        <button className='addbtn' onClick={() => props.setModal(true)}>
+                            <p className='btntext'>Create your recipe</p>
+                        </button>
+                    </div>
+
+
                 </div>
-                <div className='lastwrap'>
-                    <button className='addbtn' onClick={() => props.setModal(true)}>Create your <br /> recipe</button>
-                </div>
+
             </div>
 
 

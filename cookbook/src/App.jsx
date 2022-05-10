@@ -39,9 +39,7 @@ const App = () => {
 
       return (
         <div className="appwrap">
-          {isModalOpen && (
-            <Modal setShouldUpdate={setShouldUpdate} setModal={setModal} />
-          )}
+          {isModalOpen && <Modal setShouldUpdate={setShouldUpdate} setModal={setModal} />}
           <Header setModalToOpen={setModal} />
           <Switch>
             <Route path={`/singlePage`}>
@@ -49,7 +47,7 @@ const App = () => {
             </Route>
             {/* {selectedRecipeId ? <SinglePage recipe={data.find(e=>e.id===selectedRecipeId)}/> : <HomePage recipes={data} setSelectedRecipe={setSelectedRecipe}/>} */}
             <Route path={"/"}>
-              <HomePage recipes={data} setSelectedRecipe={setSelectedRecipe} />
+              <HomePage recipes={data} setModal={setModal} setSelectedRecipe={setSelectedRecipe} />
             </Route>
           </Switch>
           <Footer />

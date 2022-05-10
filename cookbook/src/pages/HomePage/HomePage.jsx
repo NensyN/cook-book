@@ -90,7 +90,7 @@ const HomePage = (props) => {
 <div className='lastwrap'>
 <div className='lastwrapblur'>
     {/* <img src={bigfork} alt="bigfork" className='bigfork' /> */}
-    <button className='addbtn' onClick={()=>props.setModalToOpen(true)}>Create your <br /> recipe</button>
+    <button className='addbtn' onClick={()=>props.setModal(true)}>Create your <br /> recipe</button>
     {/* <img src={bigfork2} alt="bigfork2" className='bigfork' /> */}
 </div>
 </div>

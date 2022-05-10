@@ -116,11 +116,11 @@
             display: block;
             height: inherit;
             text-transform: uppercase;
-            background: $color2;
+            background: $color1;
             border-radius: inherit;
             box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
             box-sizing: content-box;
-            background-image: url('../../images/moon.png');
+            background-image: url('../../images/sun.png');
             background-repeat: no-repeat;
             background-size: contain;
             background-position: right;
@@ -138,8 +138,8 @@
             box-sizing: content-box;
         }
         .switch-input:checked~.switch-label {
-            background-color: $color1;
-            background-image: url('../../images/sun.png');
+            background-color: $color2;
+            background-image: url('../../images/moon.png');
             background-repeat: no-repeat;
             background-size: contain;
             background-position: left;

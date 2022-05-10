@@ -7,14 +7,16 @@ import fork from '../../images/fork.png'
 import pies from '../../images/pies.PNG'
 import soup from '../../images/soup.jpg'
 import oatmeal from '../../images/oatmeal.jpg'
-import skills from '../../images/skills.jpg'
+import bigfork from '../../images/bigfork.png'
+import bigfork2 from '../../images/bigfork2.png'
 
 
-const HomePage = () => {
-
+const HomePage = (props) => {
+// console.log(props)
     return (
         <div className='homewrap'>
-            <Header />
+            {/* <Header /> */}
+
             <div className='main'>
                 <p className='maintext'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, cum?</p>
             </div>
@@ -50,7 +52,7 @@ const HomePage = () => {
 
                 </div>
             </div>
-
+                                                                    {/* SKILLS PART */}
             <div className='skilldiv'>
                 <div className='pictureskill'></div>
               <div className='skillnote'>
@@ -59,10 +61,45 @@ const HomePage = () => {
               </div>
             </div>
 
+<div className='divfork'>
+<img src={fork} alt="fork" className='fork' />
+</div>
+
+                                                                     {/* CARDS PART */}
+
+<div className='cardwrap'>
+<div className='cardwrapblur'>
+<p className='mealtitle mealtitle1'>READY-TO-EAT DISHES</p>
+<div className='divcard'>
+{props.recipes.filter(e=>e.level<=2).map(e=><Card key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e}/>)}
+</div>
+
+<p className='mealtitle'>EASY TO PREPARE MEALS</p>
+<div className='divcard'>
+{props.recipes.filter(e=>e.level<=4 && e.level>2).map(e=><Card key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e}/>)}
+</div>
 
 
-            <Card />
-            <Footer />
+<p className='mealtitle'>COMPLEX DISHES TO MAKE</p>
+<div className='divcard'>
+{props.recipes.filter(e=>e.level > 4).map(e=><Card key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e}/>)}
+</div>
+
+</div>
+
+<div className='lastwrap'>
+<div className='lastwrapblur'>
+    {/* <img src={bigfork} alt="bigfork" className='bigfork' /> */}
+    <button className='addbtn' onClick={()=>props.setModalToOpen(true)}>Create your <br /> recipe</button>
+    {/* <img src={bigfork2} alt="bigfork2" className='bigfork' /> */}
+</div>
+</div>
+
+
+
+</div>
+           
+            {/* <Footer /> */}
         </div>
     );
 };

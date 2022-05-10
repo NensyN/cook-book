@@ -6,6 +6,8 @@ import Footer from './components/Footer/Footer.jsx';
 import Modal from './components/Modal/Modal'
 import{ useState, useEffect} from "react"
 // import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Route, Switch } from "react-router-dom";
+
 import "./app.scss";
 
 const App = () => {
@@ -35,15 +37,24 @@ const App = () => {
         setModalToOpen(modalState)
       }
 
-    return (
-        <div className='appwrap'>
-         
-            {isModalOpen && <Modal setShouldUpdate={setShouldUpdate} setModal={setModal}/>}
-          <Header setModalToOpen={setModal}/>
-          {selectedRecipeId ? <SinglePage recipe={data.find(e=>e.id===selectedRecipeId)}/> : <HomePage recipes={data} setSelectedRecipe={setSelectedRecipe}/>}
-          <Footer/>
+      return (
+        <div className="appwrap">
+          {isModalOpen && (
+            <Modal setShouldUpdate={setShouldUpdate} setModal={setModal} />
+          )}
+          <Header setModalToOpen={setModal} />
+          <Switch>
+            <Route path={`/singlePage`}>
+              <SinglePage recipe={data.find((e) => e.id === selectedRecipeId)} />
+            </Route>
+            {/* {selectedRecipeId ? <SinglePage recipe={data.find(e=>e.id===selectedRecipeId)}/> : <HomePage recipes={data} setSelectedRecipe={setSelectedRecipe}/>} */}
+            <Route path={"/"}>
+              <HomePage recipes={data} setSelectedRecipe={setSelectedRecipe} />
+            </Route>
+          </Switch>
+          <Footer />
         </div>
-    );
+      );
 };
 
 

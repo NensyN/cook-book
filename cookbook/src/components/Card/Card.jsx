@@ -20,30 +20,31 @@ const Card = (props) => {
       }
 
 
-    return(
-        // <Link to={`/singlePage/${props.obj.id}`}>
-        <div className="card" >
-           
-            <img src={props.obj.image} alt="meal" className='cardimg' />
-            
-<div className='btnwrap'>
-<button onClick={()=>props.setSelectedRecipe(props.obj.id)} className='openbtn'></button>
-
-<p className='cardmealtitle'>~{props.obj.meal}~</p>
-
-            <button onClick={(e)=> {
-              e.stopPropagation();
-              e.preventDefault();
-              deleteRecipe();
-            }} 
-              className='closeBtn'></button>
-
-</div>
-
-          
+      return (
+        <div className="card">
+          <img src={props.obj.image} alt="meal" className="cardimg" />
+    
+          <div className="btnwrap">
+            <Link to={`/singlePage/${props.obj.id}`}>
+              <button
+                onClick={() => props.setSelectedRecipe(props.obj.id)}
+                className="openbtn"
+              ></button>
+            </Link>
+    
+            <p className="cardmealtitle">~{props.obj.meal}~</p>
+    
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+                deleteRecipe();
+              }}
+              className="closeBtn"
+            ></button>
+          </div>
         </div>
-        // </Link>
-    );
+      );
 };
 
 

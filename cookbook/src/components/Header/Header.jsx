@@ -13,11 +13,7 @@ const Header = () => {
 
             <div className='hw2'>
 
-                <div className='search-box'>
-                    <button className="btn-search"><i className="fas fa-search"></i></button>
-                    <input type="text" className="input-search" placeholder="Type to Search..." />
-
-                </div>
+              
 
 
                 <label className='switch'>

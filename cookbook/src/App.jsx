@@ -43,7 +43,7 @@ const App = () => {
           <Header setModalToOpen={setModal} />
           <Switch>
             <Route path={`/singlePage`}>
-              <SinglePage recipe={data.find((e) => e.id === selectedRecipeId)} />
+              <SinglePage setShouldUpdate={setShouldUpdate} recipe={data.find((e) => e.id === selectedRecipeId)} />
             </Route>
             {/* {selectedRecipeId ? <SinglePage recipe={data.find(e=>e.id===selectedRecipeId)}/> : <HomePage recipes={data} setSelectedRecipe={setSelectedRecipe}/>} */}
             <Route path={"/"}>

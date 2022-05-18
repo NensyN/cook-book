@@ -21,6 +21,9 @@
             font-weight: bold;
             margin-left: 0.5vw;
         }
+        .single-pageBtn:hover{
+            cursor: pointer;
+        }
         .deleteBtn {
             padding: 0.5vh 1vw;
             border-radius: 8px;
@@ -31,6 +34,9 @@
             font-size: 0.8em;
             letter-spacing: 1px;
             font-weight: bold;
+        }
+        .deleteBtn:hover{
+            cursor: pointer;
         }
     }
     .singlecard {

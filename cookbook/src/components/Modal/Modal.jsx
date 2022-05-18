@@ -97,15 +97,15 @@ const Modal = (props) => {
 
                 <div className='radioflex'>
                     <p className='titles'>Is it vegan: </p>
-                    <input type="radio" name="isVegan" id="isVegan" /> Yes<span></span>
-                    <input type="radio" name="isVegan" id="isVegan" /> No
+                    <input type="radio" name="isVegan" id="isVegan"  className='answ' /> Yes<span></span>
+                    <input type="radio" name="isVegan" id="isVegan"  className='answ'/> No
                 </div>
 
                 <br />
                 <div className='radioflex'>
                     <p className='titles'>Is it vegetarian: </p>
-                    <input type="radio" name="isVegetarian" id="isVegetarian" />Yes <span></span>
-                    <input type="radio" name="isVegetarian" id="isVegetarian" />No
+                    <input type="radio" name="isVegetarian" id="isVegetarian" className='answ' />Yes <span></span>
+                    <input type="radio" name="isVegetarian" id="isVegetarian"  className='answ'/>No
                 </div>
 
                 <br />

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./card.scss";
 
 const Card = (props) => {
+  // console.log('OVO JE KARTICA', props)
   const deleteRecipe = () => {
     fetch(
       `https://626d4fa650a310b8a34ce36c.mockapi.io/recipe/${props.obj.id}`,

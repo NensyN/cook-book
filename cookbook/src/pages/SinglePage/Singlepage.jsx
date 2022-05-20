@@ -44,7 +44,7 @@ const SinglePage = (props) => {
         <Link to={`/`}>
           <button
             className="single-pageBtn"
-            // onClick={() => props.setSelectedRecipe("")}
+            onClick={() => props.setSelectedRecipe("")}
           >
             Back
           </button>

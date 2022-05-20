@@ -9,11 +9,16 @@ import soup from '../../images/soup.jpg'
 import oatmeal from '../../images/oatmeal.jpg'
 import artist from '../../images/artist.jpg'
 import artist2 from '../../images/artist2.jpg'
+import {useState} from 'react'
 // import bigfork from '../../images/bigfork.png'
 // import bigfork2 from '../../images/bigfork2.png'
 
 
 const HomePage = (props) => {
+    const [search, setSearch] = useState("")
+
+
+    
     // console.log(props)
     return (
         <div className='homewrap'>
@@ -133,7 +138,7 @@ const HomePage = (props) => {
 
                     <div className='search-box'>
                         <button className="btn-search"><i className="fas fa-search"></i></button>
-                        <input type="text" className="input-search" placeholder="Type to Search..." />
+                        <input type="text" className="input-search" placeholder="Type to Search..." onChange={(e)=> setSearch(e.target.value)} />
                     </div>
                     <div className='lastwrap'>
                         <button className='addbtn' onClick={() => props.setModal(true)}>
@@ -153,18 +158,39 @@ const HomePage = (props) => {
                 <div className='cardwrapblur'>
                     <p className='mealtitle mealtitle1'>READY-TO-EAT DISHES</p>
                     <div className='divcard'>
-                        {props.recipes.filter(e => e.level <= 2).map(e => <Card key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
+                        {props.recipes.filter((e) => {
+                            if(search === "" && e.level <= 2){
+                                return e;
+                            } else if (e.meal.toLowerCase().includes(search.toLowerCase()) && e.level <= 2){
+                                return e;
+                            } else return null;
+
+                        }).map(e => <Card key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
                     </div>
 
                     <p className='mealtitle'>EASY TO PREPARE MEALS</p>
                     <div className='divcard'>
-                        {props.recipes.filter(e => e.level <= 4 && e.level > 2).map(e => <Card key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
+                        {props.recipes.filter((e) => {
+                            if(search === "" && e.level <= 4 && e.level > 2){
+                                return e;
+                            } else if (e.meal.toLowerCase().includes(search.toLowerCase()) && e.level <= 4 && e.level > 2){
+                                return e;
+                            } else return null;
+
+                        }).map(e => <Card key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
                     </div>
 
 
                     <p className='mealtitle'>COMPLEX DISHES TO MAKE</p>
                     <div className='divcard'>
-                        {props.recipes.filter(e => e.level > 4).map(e => <Card key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
+                        {props.recipes.filter((e) => {
+                            if(search === "" && e.level > 4){
+                                return e;
+                            } else if (e.meal.toLowerCase().includes(search.toLowerCase()) && e.level > 4){
+                                return e;
+                            } else return null;
+
+                        }).map(e => <Card key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
                     </div>
 
                 </div>

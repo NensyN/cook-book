@@ -44,7 +44,7 @@ const SinglePage = (props) => {
         <Link to={`/`}>
           <button
             className="single-pageBtn"
-            onClick={() => props.setSelectedRecipe("")}
+            // onClick={() => props.setSelectedRecipe("")}
           >
             Back
           </button>
@@ -61,7 +61,7 @@ const SinglePage = (props) => {
         <p>Ingredients:</p>
         <ol className="inglist">
           {props.recipe.ingredients.map((e) => (
-            <li>{e}</li>
+            <li key={e.id}>{e}</li>
           ))}
         </ol>
 
@@ -70,7 +70,7 @@ const SinglePage = (props) => {
           <div className="mealtype">
             {" "}
             {props.recipe.mealType.map((e) => (
-              <li>{e}</li>
+              <li key={e.id}>{e}</li>
             ))}{" "}
           </div>
         </div>

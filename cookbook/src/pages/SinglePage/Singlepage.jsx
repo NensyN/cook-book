@@ -61,7 +61,7 @@ const SinglePage = (props) => {
         <p>Ingredients:</p>
         <ol className="inglist">
           {props.recipe.ingredients.map((e) => (
-            <li key={e.id}>{e}</li>
+            <li>{e}</li>
           ))}
         </ol>
 
@@ -70,7 +70,7 @@ const SinglePage = (props) => {
           <div className="mealtype">
             {" "}
             {props.recipe.mealType.map((e) => (
-              <li key={e.id}>{e}</li>
+              <li >{e}</li>
             ))}{" "}
           </div>
         </div>
@@ -78,13 +78,13 @@ const SinglePage = (props) => {
         <p>
           Is Vegan:{" "}
           {props.recipe.isVegan.toString((e) => (
-            <li>{e}</li>
+            <li >{e}</li>
           ))}
         </p>
         <p>
           is Vegetarian:{" "}
           {props.recipe.isVegetarian.toString((e) => (
-            <li>{e}</li>
+            <li >{e}</li>
           ))}
         </p>
       </div>

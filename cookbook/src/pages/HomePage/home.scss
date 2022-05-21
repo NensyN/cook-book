@@ -241,8 +241,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            .specwrap {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 75vw;
+                .srchTitle {
+                    width: 45vw;
+                    font-family: "Water Brush", cursive;
+                    letter-spacing: 0.2em;
+                    font-size: 25px;
+                }
+            }
             .secwrap {
-                width: 65vw;
+                // width: 65vw;
                 margin-right: 2vw;
                 height: 15vh;
                 background-color: rgba(251, 251, 251, 255);

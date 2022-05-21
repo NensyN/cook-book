@@ -5,7 +5,7 @@ const Footer = () => {
 
     return (
         <div className='footerwrap'>
-            Created By Bit Student <span>Nevena Nikolić</span>
+            Created By Bit Students -  <span>Nevena Nikolić & Nikola Vasić</span>
         </div>
     );
 };

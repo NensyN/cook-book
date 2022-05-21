@@ -9,7 +9,7 @@ import soup from '../../images/soup.jpg'
 import oatmeal from '../../images/oatmeal.jpg'
 import artist from '../../images/artist.jpg'
 import artist2 from '../../images/artist2.jpg'
-import {useState} from 'react'
+import { useState } from 'react'
 // import bigfork from '../../images/bigfork.png'
 // import bigfork2 from '../../images/bigfork2.png'
 
@@ -18,7 +18,7 @@ const HomePage = (props) => {
     const [search, setSearch] = useState("")
 
 
-    
+
     // console.log(props)
     return (
         <div className='homewrap'>
@@ -129,24 +129,26 @@ const HomePage = (props) => {
             {/* DEO ZA SEARCH I CREATE BTN */}
 
             <div className='secheader'>
+                <div className='specwrap'>
+                    <div><p className='srchTitle'>Make magic with the artist! Share your favorites!</p></div>
+                    <div className='secwrap'>
 
-                <div className='secwrap'>
+                        <div className='macaroondiv'>
+                            <div className='macpicdiv'></div>
+                        </div>
 
-                    <div className='macaroondiv'>
-                        <div className='macpicdiv'></div>
+                        <div className='search-box'>
+                            <button className="btn-search"><i className="fas fa-search"></i></button>
+                            <input type="text" className="input-search" placeholder="Type to Search..." onChange={(e) => setSearch(e.target.value)} />
+                        </div>
+                        <div className='lastwrap'>
+                            <button className='addbtn' onClick={() => props.setModal(true)}>
+                                <p className='btntext'>Create your recipe</p>
+                            </button>
+                        </div>
+
+
                     </div>
-
-                    <div className='search-box'>
-                        <button className="btn-search"><i className="fas fa-search"></i></button>
-                        <input type="text" className="input-search" placeholder="Type to Search..." onChange={(e)=> setSearch(e.target.value)} />
-                    </div>
-                    <div className='lastwrap'>
-                        <button className='addbtn' onClick={() => props.setModal(true)}>
-                            <p className='btntext'>Create your recipe</p>
-                        </button>
-                    </div>
-
-
                 </div>
 
             </div>
@@ -159,9 +161,9 @@ const HomePage = (props) => {
                     <p className='mealtitle mealtitle1'>READY-TO-EAT DISHES</p>
                     <div className='divcard'>
                         {props.recipes.filter((e) => {
-                            if(search === "" && e.level <= 2){
+                            if (search === "" && e.level <= 2) {
                                 return e;
-                            } else if (e.meal.toLowerCase().includes(search.toLowerCase()) && e.level <= 2){
+                            } else if (e.meal.toLowerCase().includes(search.toLowerCase()) && e.level <= 2) {
                                 return e;
                             } else return null;
 
@@ -171,9 +173,9 @@ const HomePage = (props) => {
                     <p className='mealtitle'>EASY TO PREPARE MEALS</p>
                     <div className='divcard'>
                         {props.recipes.filter((e) => {
-                            if(search === "" && e.level <= 4 && e.level > 2){
+                            if (search === "" && e.level <= 4 && e.level > 2) {
                                 return e;
-                            } else if (e.meal.toLowerCase().includes(search.toLowerCase()) && e.level <= 4 && e.level > 2){
+                            } else if (e.meal.toLowerCase().includes(search.toLowerCase()) && e.level <= 4 && e.level > 2) {
                                 return e;
                             } else return null;
 
@@ -184,9 +186,9 @@ const HomePage = (props) => {
                     <p className='mealtitle'>COMPLEX DISHES TO MAKE</p>
                     <div className='divcard'>
                         {props.recipes.filter((e) => {
-                            if(search === "" && e.level > 4){
+                            if (search === "" && e.level > 4) {
                                 return e;
-                            } else if (e.meal.toLowerCase().includes(search.toLowerCase()) && e.level > 4){
+                            } else if (e.meal.toLowerCase().includes(search.toLowerCase()) && e.level > 4) {
                                 return e;
                             } else return null;
 

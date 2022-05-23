@@ -11,12 +11,13 @@
     width: 20.5vw;
     .cardimg {
         width: 20vw;
+        max-height: 22vh;
         border-radius: 7px 7px 0px 0px
     }
     .cardmealtitle {
         letter-spacing: 0.1em;
         // margin: 1vh 2vw;
-        font-size: 0.7em;
+        font-size: 0.9em;
     }
     .btnwrap {
         display: flex;

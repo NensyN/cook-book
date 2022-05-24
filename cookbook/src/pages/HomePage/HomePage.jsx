@@ -49,7 +49,7 @@ const HomePage = (props) => {
                 <div className='secmain1'>
                     <p className='t1'>HISTORY OF THE PERFORMER</p>
                     <p className='t2'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, ipsa fugit? Dicta labore cupiditate dolore nesciunt excepturi. Ipsam, voluptates voluptatibus.</p>
-                    {/* <img src={fork} alt="fork" className='img1' /> */}
+                   
                 </div>
 
                 <div className='secmain2'>

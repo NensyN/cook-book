@@ -21,7 +21,7 @@ const HomePage = (props) => {
 
     return (
         <div className='homewrap'>
-            {/* <Header /> */}
+           
             {confirmModal === "open" ? <ConfirmModal selectedRecipeId={props.selectedRecipeId} setShouldUpdate={props.setShouldUpdate} recipe={props.recipe} changeConfirmModal={changeConfirmModal}/> : null}
             <div className='main'>
                 <p className='maintext'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, cum?</p>
@@ -183,7 +183,7 @@ const HomePage = (props) => {
                 </div>
             </div>
 
-            {/* <Footer /> */}
+          
         </div>
     );
 };

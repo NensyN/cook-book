@@ -1,35 +1,43 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState } from 'react'
+import ConfirmModal from '../../components/confirmModal/ConfirmModal';
 import "./single.scss";
 
 const SinglePage = (props) => {
-  console.log(props);
+  // console.log(props);
+  const [confirmModal, setConfirmModal] = useState("close")
+  function changeConfirmModal(x){
+    setConfirmModal(x)
+}
 
 
-  const deleteRecipeSingle = () => {
-    fetch(
-      `https://626d4fa650a310b8a34ce36c.mockapi.io/recipe/${props.recipe.id}`,
-      {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(props.recipe),
-      }
-    )
-      .then((res) => res.json())
-      .then(() => props.setShouldUpdate());
-  };
+  // const deleteRecipeSingle = () => {
+  //   fetch(
+  //     `https://626d4fa650a310b8a34ce36c.mockapi.io/recipe/${props.recipe.id}`,
+  //     {
+  //       method: "DELETE",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(props.recipe),
+  //     }
+  //   )
+  //     .then((res) => res.json())
+  //     .then(() => props.setShouldUpdate());
+  // };
 
-  console.log(props.recipe.id)
+  // console.log(props.recipe.id)
 
   return (
     <div className="single-page">
+       {confirmModal === "open" ? <ConfirmModal selectedRecipeId={props.selectedRecipeId} setShouldUpdate={props.setShouldUpdate} recipe={props.recipe} changeConfirmModal={changeConfirmModal}/> : null}
       <div className="btnWrap">
         <Link to={`/`}>
           <button
             onClick={(e) => {
-              deleteRecipeSingle();
+              // deleteRecipeSingle();
+              changeConfirmModal={changeConfirmModal} 
             }}
             className="deleteBtn"
           >

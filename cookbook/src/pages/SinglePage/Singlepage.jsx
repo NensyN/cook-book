@@ -27,6 +27,8 @@ const SinglePage = (props) => {
   //   setUpdate(!shouldUpdate);
   // };
 
+  console.log(props.recipe.id)
+
   return (
     <div className="single-page">
       <div className="btnWrap">

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./card.scss";
 
 const Card = (props) => {
+  
   // console.log('OVO JE KARTICA', props)
   const deleteRecipe = () => {
     fetch(
@@ -36,9 +37,11 @@ const Card = (props) => {
 
         <button
           onClick={(e) => {
-            e.stopPropagation();
-            e.preventDefault();
-            deleteRecipe();
+            // e.stopPropagation();
+            // e.preventDefault();
+            // deleteRecipe();
+            props.setSelectedRecipe(props.obj.id)
+            props.changeConfirmModal("open")
           }}
           className="closeBtn"
         ></button>

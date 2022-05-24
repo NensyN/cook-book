@@ -10,20 +10,25 @@ import oatmeal from '../../images/oatmeal.jpg'
 import artist from '../../images/artist.jpg'
 import artist2 from '../../images/artist2.jpg'
 import { useState } from 'react'
+import ConfirmModal from '../../components/confirmModal/ConfirmModal';
 // import bigfork from '../../images/bigfork.png'
 // import bigfork2 from '../../images/bigfork2.png'
 
 
 const HomePage = (props) => {
     const [search, setSearch] = useState("")
+    const [confirmModal, setConfirmModal] = useState("close")
+
+    function changeConfirmModal(x){
+        setConfirmModal(x)
+    }
 
 
-
-    // console.log(props)
+    // console.log(props.selectedRecipeId)
     return (
         <div className='homewrap'>
             {/* <Header /> */}
-
+            {confirmModal === "open" ? <ConfirmModal selectedRecipeId={props.selectedRecipeId} setShouldUpdate={props.setShouldUpdate} recipe={props.recipe} changeConfirmModal={changeConfirmModal}/> : null}
             <div className='main'>
                 <p className='maintext'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, cum?</p>
             </div>
@@ -167,7 +172,7 @@ const HomePage = (props) => {
                                 return e;
                             } else return null;
 
-                        }).map(e => <Card key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
+                        }).map(e => <Card changeConfirmModal={changeConfirmModal} key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
                     </div>
 
                     <p className='mealtitle'>EASY TO PREPARE MEALS</p>
@@ -179,7 +184,7 @@ const HomePage = (props) => {
                                 return e;
                             } else return null;
 
-                        }).map(e => <Card key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
+                        }).map(e => <Card changeConfirmModal={changeConfirmModal} key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
                     </div>
 
 
@@ -192,7 +197,7 @@ const HomePage = (props) => {
                                 return e;
                             } else return null;
 
-                        }).map(e => <Card key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
+                        }).map(e => <Card changeConfirmModal={changeConfirmModal} key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
                     </div>
 
                 </div>

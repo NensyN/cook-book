@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./confirm-modal.scss"
 
@@ -26,12 +27,15 @@ const ConfirmModal = (props) => {
       <div className="confirm-modal">
         <h3>Are you sure you want to delete this recipe?</h3>
         <div className="btnDiv">
-          <button className="yesBtn" onClick={(e) => {
-            e.stopPropagation();
-            e.preventDefault();
-            deleteRecipeConfirm();
-            props.changeConfirmModal("close");
-          }}>Yes</button>
+          <Link to={`/`}>
+            <button className="yesBtn" onClick={(e) => {
+            //  e.stopPropagation();
+            //  e.preventDefault();
+             deleteRecipeConfirm();
+             props.changeConfirmModal("close");
+             props.deleteRecipeSingle();
+            }}>Yes</button>
+          </Link>
 
           <button className="noBtn" onClick={(e) => {
             props.changeConfirmModal("close")

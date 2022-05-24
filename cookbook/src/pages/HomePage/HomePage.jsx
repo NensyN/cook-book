@@ -12,17 +12,13 @@ import ConfirmModal from '../../components/confirmModal/ConfirmModal';
 
 const HomePage = (props) => {
     const [search, setSearch] = useState("")
-    const [confirmModal, setConfirmModal] = useState("close")
-
-    function changeConfirmModal(x){
-        setConfirmModal(x)
-    }
+    
 
 
     return (
         <div className='homewrap'>
            
-            {confirmModal === "open" ? <ConfirmModal selectedRecipeId={props.selectedRecipeId} setShouldUpdate={props.setShouldUpdate} recipe={props.recipe} changeConfirmModal={changeConfirmModal}/> : null}
+            {props.confirmModal === "open" ? <ConfirmModal selectedRecipeId={props.selectedRecipeId} setShouldUpdate={props.setShouldUpdate} recipe={props.recipe} changeConfirmModal={props.changeConfirmModal}/> : null}
             <div className='main'>
                 <p className='maintext'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, cum?</p>
             </div>
@@ -154,7 +150,7 @@ const HomePage = (props) => {
                                 return e;
                             } else return null;
 
-                        }).map(e => <Card changeConfirmModal={changeConfirmModal} key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
+                        }).map(e => <Card changeConfirmModal={props.changeConfirmModal} key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
                     </div>
 
                     <p className='mealtitle'>EASY TO PREPARE MEALS</p>
@@ -166,7 +162,7 @@ const HomePage = (props) => {
                                 return e;
                             } else return null;
 
-                        }).map(e => <Card changeConfirmModal={changeConfirmModal} key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
+                        }).map(e => <Card changeConfirmModal={props.changeConfirmModal} key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
                     </div>
 
                     <p className='mealtitle'>COMPLEX DISHES TO MAKE</p>
@@ -178,7 +174,7 @@ const HomePage = (props) => {
                                 return e;
                             } else return null;
 
-                        }).map(e => <Card changeConfirmModal={changeConfirmModal} key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
+                        }).map(e => <Card changeConfirmModal={props.changeConfirmModal} key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
                     </div>
                 </div>
             </div>

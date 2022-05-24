@@ -15,6 +15,11 @@ const App = () => {
     const [selectedRecipeId, setSelectedRecipeId] = useState("")
     const [isModalOpen, setModalToOpen] = useState(false)
     const [shouldUpdate, setUpdate] = useState(false)
+    const [confirmModal, setConfirmModal] = useState("close")
+
+    function changeConfirmModal(x){
+        setConfirmModal(x)
+    }
 
 
     useEffect(()=>{
@@ -42,10 +47,10 @@ const App = () => {
           <Header setModalToOpen={setModal} />
           <Switch>
             <Route path={`/singlePage`}>
-              <SinglePage setSelectedRecipe={setSelectedRecipe} setShouldUpdate={setShouldUpdate} recipe={data.find((e) => e.id === selectedRecipeId)} />
+              <SinglePage confirmModal={confirmModal} changeConfirmModal={changeConfirmModal} setSelectedRecipe={setSelectedRecipe} setShouldUpdate={setShouldUpdate} recipe={data.find((e) => e.id === selectedRecipeId)} />
             </Route>
             <Route path={"/"}>
-              <HomePage recipes={data} selectedRecipeId={selectedRecipeId} setShouldUpdate={setShouldUpdate} setModal={setModal} setSelectedRecipe={setSelectedRecipe} />
+              <HomePage confirmModal={confirmModal} changeConfirmModal={changeConfirmModal} recipes={data} selectedRecipeId={selectedRecipeId} setShouldUpdate={setShouldUpdate} setModal={setModal} setSelectedRecipe={setSelectedRecipe} />
             </Route>
           </Switch>
           <Footer />

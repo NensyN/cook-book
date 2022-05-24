@@ -5,7 +5,7 @@ import "./header.scss";
 const Header = () => {
 
     return (
-        <div className='headerwrap'>
+        <div id='topPage' className='headerwrap'>
             <div className='hw1'>
                 <img src={logo} alt="logo" className='headerimg' />
                 <p>Healthy <span>Artist</span></p>
@@ -13,17 +13,11 @@ const Header = () => {
 
             <div className='hw2'>
 
-              
-
-
                 <label className='switch'>
                     <input className="switch-input" type="checkbox" />
                     <span className="switch-label" data-on='on' data-off="Off"></span>
                     <span className="switch-handle"></span>
                 </label>
-
-
-
 
             </div>
 

@@ -1,6 +1,25 @@
         @import "../../base";
         @import "../../variables";
         // height: calc(100% - 100px);
+
+        #backOnTopLink{
+            background-image: url("https://png.pngitem.com/pimgs/s/11-115978_ncbe4ky4i-arrow-mark-inside-gray-circle-png-transparent.png");
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            position: fixed;
+            right: 5vw;
+            bottom: 5vh;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            
+        }
         .main {
             min-height: calc(100vh - 100px);
             background-image: url("../../images/bg.webp");
@@ -8,6 +27,23 @@
             background-size: cover;
             opacity: 0.85;
             position: relative;
+            .aboutSection{
+                height: 100%;
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 5vw;
+                padding-top: 2vh;
+                   a{
+                       text-decoration: none;
+                       color: white;
+                       font-size: 20px;
+                       text-indent: 20px;
+                   }
+                   a:hover{
+                       color: yellow;
+                   }
+                   
+            }
             .maintext {
                 position: absolute;
                 width: 35vw;
@@ -389,6 +425,7 @@
             background-image: url("../../images/pasta.jpg");
             background-repeat: no-repeat;
             background-size: cover;
+            text-align: center;
             .cardwrapblur {
                 width: 100%;
                 height: 100%;
@@ -410,9 +447,9 @@
             }
             .divcard {
                 display: flex;
-                flex-direction: row;
                 flex-wrap: wrap;
                 margin-left: 5vw;
                 margin-bottom: 5vh;
+                justify-content: center;
             }
         }

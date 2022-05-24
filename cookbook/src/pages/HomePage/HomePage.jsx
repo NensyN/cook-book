@@ -17,9 +17,20 @@ const HomePage = (props) => {
 
     return (
         <div className='homewrap'>
+
+            <a href="#topPage" id='backOnTopLink'></a>
            
             {props.confirmModal === "open" ? <ConfirmModal selectedRecipeId={props.selectedRecipeId} setShouldUpdate={props.setShouldUpdate} recipe={props.recipe} changeConfirmModal={props.changeConfirmModal}/> : null}
             <div className='main'>
+            <div className='aboutSection'>
+                <a href="#about"> ➤ About </a>
+                
+                <a href="#history"> ➤ History  </a>
+                
+                <a href="#skills"> ➤ Skills  </a>
+                
+                <a href="#dishes" > ➤ Dishes  </a>
+            </div>
                 <p className='maintext'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, cum?</p>
             </div>
 
@@ -31,7 +42,7 @@ const HomePage = (props) => {
                 <div className='secmain001'>
                     <img src={artist} alt="artist" className='artistimg' />
                     <img src={artist2} alt="artist2" className='artistimg' />
-                    <div className='secmain0001'>
+                    <div id='about' className='secmain0001'>
                         <p className='t11'>WHO IS THE ASTIST?</p>
                         <p className='t12'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid assumenda consectetur beatae asperiores, recusandae rem aspernatur dolore tempore repudiandae nostrum dolores itaque nam! Tenetur delectus autem eius sunt dolores? Molestias!</p>
                         <p className='t12'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est eius assumenda at quos facilis sit sequi ipsam cumque neque quidem iusto non, vitae quod necessitatibus, dolore deserunt voluptas iste perferendis, distinctio qui repellendus vel doloribus dicta. Officia, expedita dignissimos?</p>
@@ -42,7 +53,7 @@ const HomePage = (props) => {
 
             {/* valjda je ovde kraj */}
             <div className='secmain'>
-                <div className='secmain1'>
+                <div id='history' className='secmain1'>
                     <p className='t1'>HISTORY OF THE PERFORMER</p>
                     <p className='t2'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, ipsa fugit? Dicta labore cupiditate dolore nesciunt excepturi. Ipsam, voluptates voluptatibus.</p>
                    
@@ -74,7 +85,7 @@ const HomePage = (props) => {
             </div>
 
             {/* SKILLS PART */}
-            <div className='skilldiv'>
+            <div id='skills' className='skilldiv'>
                 <div className='pictureskill'></div>
                 <div className='skillnote'>
                     <p className='title'>SKILLS</p>
@@ -141,7 +152,7 @@ const HomePage = (props) => {
 
             <div className='cardwrap'>
                 <div className='cardwrapblur'>
-                    <p className='mealtitle mealtitle1'>READY-TO-EAT DISHES</p>
+                    <p id='dishes' className='mealtitle mealtitle1'>READY-TO-EAT DISHES</p>
                     <div className='divcard'>
                         {props.recipes.filter((e) => {
                             if (search === "" && e.level <= 2) {

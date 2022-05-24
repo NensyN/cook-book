@@ -32,9 +32,6 @@ const ConfirmModal = (props) => {
                     props.changeConfirmModal("close");
                 }}>Yes</button>
 
-
-
-
                 <button className="noBtn" onClick={(e)=>{
                     props.changeConfirmModal("close")
                 }}>No</button>

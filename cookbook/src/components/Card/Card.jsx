@@ -1,25 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./card.scss";
 
 const Card = (props) => {
-  
-  // console.log('OVO JE KARTICA', props)
-  const deleteRecipe = () => {
-    fetch(
-      `https://626d4fa650a310b8a34ce36c.mockapi.io/recipe/${props.obj.id}`,
-      {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(props.recipe),
-      }
-    )
-      .then((res) => res.json())
-      .then(() => props.setShouldUpdate());
-  };
-
   
   return (
     <div className="card">
@@ -37,9 +20,6 @@ const Card = (props) => {
 
         <button
           onClick={(e) => {
-            // e.stopPropagation();
-            // e.preventDefault();
-            // deleteRecipe();
             props.setSelectedRecipe(props.obj.id)
             props.changeConfirmModal("open")
           }}

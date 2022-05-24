@@ -5,7 +5,6 @@ import Header from './components/Header/Header.jsx'
 import Footer from './components/Footer/Footer.jsx';
 import Modal from './components/Modal/Modal'
 import{ useState, useEffect} from "react"
-// import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Route, Switch } from "react-router-dom";
 
 import "./app.scss";
@@ -45,7 +44,6 @@ const App = () => {
             <Route path={`/singlePage`}>
               <SinglePage setSelectedRecipe={setSelectedRecipe} setShouldUpdate={setShouldUpdate} recipe={data.find((e) => e.id === selectedRecipeId)} />
             </Route>
-            {/* {selectedRecipeId ? <SinglePage recipe={data.find(e=>e.id===selectedRecipeId)}/> : <HomePage recipes={data} setSelectedRecipe={setSelectedRecipe}/>} */}
             <Route path={"/"}>
               <HomePage recipes={data} selectedRecipeId={selectedRecipeId} setShouldUpdate={setShouldUpdate} setModal={setModal} setSelectedRecipe={setSelectedRecipe} />
             </Route>

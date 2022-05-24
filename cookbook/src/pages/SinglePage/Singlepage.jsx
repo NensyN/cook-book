@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import "./single.scss";
 
 const SinglePage = (props) => {
   console.log(props);
 
-  // const [shouldUpdate, setUpdate] = useState(false);
 
   const deleteRecipeSingle = () => {
     fetch(
@@ -22,10 +20,6 @@ const SinglePage = (props) => {
       .then((res) => res.json())
       .then(() => props.setShouldUpdate());
   };
-
-  // const setShouldUpdate = () => {
-  //   setUpdate(!shouldUpdate);
-  // };
 
   console.log(props.recipe.id)
 
@@ -58,7 +52,6 @@ const SinglePage = (props) => {
         <p className="mainTitle">~{props.recipe.meal}~</p>
         <p>Country of origin: {props.recipe.countryOfOrigin}</p>
         <p>Preparation time: {props.recipe.prepTime} min</p>
-        {/* <p>Level : {props.recipe.level}</p> */}
 
         <p>Ingredients:</p>
         <ol className="inglist">

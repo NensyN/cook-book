@@ -1,9 +1,6 @@
 import React from 'react';
 import "./home.scss";
 import Card from "../../components/Card/Card.jsx";
-// import Header from "../../components/Header/Header.jsx";
-// import Footer from "../../components/Footer/Footer.jsx";
-// import fork from '../../images/fork.png'
 import pies from '../../images/pies.PNG'
 import soup from '../../images/soup.jpg'
 import oatmeal from '../../images/oatmeal.jpg'
@@ -11,8 +8,6 @@ import artist from '../../images/artist.jpg'
 import artist2 from '../../images/artist2.jpg'
 import { useState } from 'react'
 import ConfirmModal from '../../components/confirmModal/ConfirmModal';
-// import bigfork from '../../images/bigfork.png'
-// import bigfork2 from '../../images/bigfork2.png'
 
 
 const HomePage = (props) => {
@@ -24,7 +19,6 @@ const HomePage = (props) => {
     }
 
 
-    // console.log(props.selectedRecipeId)
     return (
         <div className='homewrap'>
             {/* <Header /> */}
@@ -48,13 +42,7 @@ const HomePage = (props) => {
                         <p className='t12'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid assumenda consectetur beatae asperiores, recusandae rem aspernatur dolore tempore repudiandae nostrum dolores itaque nam! Tenetur delectus autem eius sunt dolores? Molestias!</p>
                     </div>
                 </div>
-
-
-
-
             </div>
-
-
 
             {/* valjda je ovde kraj */}
             <div className='secmain'>
@@ -88,9 +76,6 @@ const HomePage = (props) => {
 
                 </div>
             </div>
-
-
-
 
             {/* SKILLS PART */}
             <div className='skilldiv'>
@@ -151,11 +136,8 @@ const HomePage = (props) => {
                                 <p className='btntext'>Create your recipe</p>
                             </button>
                         </div>
-
-
                     </div>
                 </div>
-
             </div>
 
 
@@ -187,7 +169,6 @@ const HomePage = (props) => {
                         }).map(e => <Card changeConfirmModal={changeConfirmModal} key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
                     </div>
 
-
                     <p className='mealtitle'>COMPLEX DISHES TO MAKE</p>
                     <div className='divcard'>
                         {props.recipes.filter((e) => {
@@ -199,13 +180,7 @@ const HomePage = (props) => {
 
                         }).map(e => <Card changeConfirmModal={changeConfirmModal} key={e.id} setShouldUpdate={props.setShouldUpdate} setSelectedRecipe={props.setSelectedRecipe} obj={e} />)}
                     </div>
-
                 </div>
-
-
-
-
-
             </div>
 
             {/* <Footer /> */}

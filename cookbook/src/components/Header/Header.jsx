@@ -13,6 +13,15 @@ const Header = () => {
 
             <div className='hw2'>
 
+                <div className='aboutSection'>
+                    <a href="#about"> ➤ About </a>
+
+                    <a href="#history"> ➤ History  </a>
+
+                    <a href="#skills"> ➤ Skills  </a>
+
+                    <a href="#dishes" > ➤ Dishes  </a>
+                </div>
                 <label className='switch'>
                     <input className="switch-input" type="checkbox" />
                     <span className="switch-label" data-on='on' data-off="Off"></span>

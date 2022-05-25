@@ -6,7 +6,6 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    
     .hw1 {
         color: white;
         font-size: 2em;
@@ -30,6 +29,22 @@
         justify-content: center;
         align-items: center;
         font-family: 'Poppins', sans-serif;
+        .aboutSection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 1vw;
+            a {
+                font-family: 'Poppins', sans-serif;
+                text-decoration: none;
+                color: white;
+                font-size: 1em;
+                text-indent: 15px;
+            }
+            a:hover {
+                color: $color2;
+            }
+        }
         ////////ON/OFF BUTTON///////
         .switch {
             position: relative;

@@ -16,6 +16,7 @@
             width: 20vw;
             min-height: 50vh;
             border-radius: 25px;
+            padding-bottom: 1vh;
             .menutitle {
                 font-family: "Water Brush", cursive;
                 font-size: 2em;
@@ -31,7 +32,7 @@
                 font-size: 1.2em;
                 margin-bottom: 0.1vh;
                 margin-right: 4vw;
-                letter-spacing: 1.5px;
+                letter-spacing: 1.2px;
             }
             .answ {
                 font-family: "Water Brush", cursive;
@@ -126,27 +127,27 @@
                     cursor: pointer;
                     animation: shake 0.5s;
                 }
-                .macaroondiv {
-                    width: 5vw;
-                    height: 3vh;
-                    margin-bottom: 4vh;
-                    margin-left: 1vw;
-                    .macpicdiv {
-                        background-image: url('../../images/littlemacaroons.png');
-                        background-repeat: no-repeat;
-                        background-size: contain;
-                        background-position: center;
-                        height: 6vh;
-                        width: 6vw;
-                    }
-                    .macpicdiv:hover {
-                        background-image: url('../../images/bigmacaroon.png');
-                        background-repeat: no-repeat;
-                        background-size: contain;
-                        background-position: center;
-                        height: 7vh;
-                    }
-                }
+                // .macaroondiv {
+                //     width: 5vw;
+                //     height: 3vh;
+                //     margin-bottom: 4vh;
+                //     margin-left: 1vw;
+                //     .macpicdiv {
+                //         background-image: url('../../images/littlemacaroons.png');
+                //         background-repeat: no-repeat;
+                //         background-size: contain;
+                //         background-position: center;
+                //         height: 6vh;
+                //         width: 6vw;
+                //     }
+                //     .macpicdiv:hover {
+                //         background-image: url('../../images/bigmacaroon.png');
+                //         background-repeat: no-repeat;
+                //         background-size: contain;
+                //         background-position: center;
+                //         height: 7vh;
+                //     }
+                // }
             }
         }
     }

@@ -22,15 +22,7 @@ const HomePage = (props) => {
            
             {props.confirmModal === "open" ? <ConfirmModal selectedRecipeId={props.selectedRecipeId} setShouldUpdate={props.setShouldUpdate} recipe={props.recipe} changeConfirmModal={props.changeConfirmModal}/> : null}
             <div className='main'>
-            <div className='aboutSection'>
-                <a href="#about"> ➤ About </a>
-                
-                <a href="#history"> ➤ History  </a>
-                
-                <a href="#skills"> ➤ Skills  </a>
-                
-                <a href="#dishes" > ➤ Dishes  </a>
-            </div>
+          
                 <p className='maintext'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, cum?</p>
             </div>
 

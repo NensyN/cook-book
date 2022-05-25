@@ -40,9 +40,11 @@
                 color: white;
                 font-size: 1em;
                 text-indent: 15px;
+                cursor: pointer;
             }
             a:hover {
                 color: $color2;
+                cursor: pointer;
             }
         }
         ////////ON/OFF BUTTON///////
